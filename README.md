@@ -1,61 +1,39 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Arsip Surat Desa Karangduren
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+Aplikasi sederhana untuk mengarsipkan surat (PDF) dengan Laravel + MySQL.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tujuan
+Membantu kelurahan mengelola arsip surat hasil pemindaian (PDF) berdasarkan kategori.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Fitur
+- CRUD Arsip Surat (upload PDF only, lihat, unduh, hapus dengan konfirmasi)
+- Pencarian judul (substring, case-insensitive)
+- CRUD Kategori (ID auto)
+- Halaman About (Foto, Nama, NIM, Tanggal pembuatan)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Cara Menjalankan
+1. `composer install` (jika belum)
+2. Salin `.env.example` menjadi `.env` lalu atur koneksi database
+3. `php artisan key:generate`
+4. `php artisan migrate --seed`
+5. `php artisan storage:link`
+6. `php artisan serve` lalu buka `http://127.0.0.1:8000`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Screenshot
+<img width="959" height="439" alt="utama" src="https://github.com/user-attachments/assets/9691be8e-e1fe-4126-ba22-0058eb61592c" />
+<img width="955" height="435" alt="about" src="https://github.com/user-attachments/assets/4c9d0004-2590-46f3-bd22-a11eb04fe305" />
+<img width="959" height="442" alt="hapus" src="https://github.com/user-attachments/assets/5a55c238-0e32-4ba8-96e0-ce6f0cf88bdb" />
+<img width="959" height="440" alt="detail"<img width="957" height="434" alt="kategori" src="https://github.com/user-attachments/assets/e3bf5c83-adab-4878-95dd-7a46f702abbd" />
+<img width="955" height="432" alt="upload" src="https://github.com/user-attachments/assets/e257d356-3bb2-458e-9f5a-6020ee0b9fc8" />
+<img width="959" height="440" alt="detail" src="https://github.com/user-attachments/assets/ae6b4a5c-1c44-440a-83d8-9beb8f567566" />
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Teknologi
+- Laravel 12, Blade, Tailwind (CDN)
+, Blade, Tailwind (CDN)
+- MySQL/MariaDB
